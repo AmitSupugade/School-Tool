@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parent Profile</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="profile.css">
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+    <script src="pprofile.js"></script>
+	
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand hidden-xs" href="test.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="test.html">NoblePeer</a>
+					
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="test.html">Home</a></li>
+								<li><a href="pprofile.html">Profile</a></li>
+								<li><a href="school.html">School</a></li>
+								<li><a id="logout" href="index.html">Logout</a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<div class="row">
+				<div class="row-offcanvas row-offcanvas-left">	
+					<div class="row-offcanvas row-offcanvas-right">
+						<div class="row">
+							<div class="col-sm-3 col-md-2 col-page-left nopadding sidebar-offcanvas sidebar-offcanvas-left" role="navigation">
+								<div class="box-header box-header-left">
+									<p id="welcome-msg"></p>
+								</div>
+								
+								<ul class="sidebar-nav">
+									<li><button type="button" class="btn btn-default btn-edit-profile" style="margin: 20px">Edit Profile</button></li>
+									<li><button type="button" class="btn btn-default btn-change-password" style="margin: 20px">Change Password</button></li>
+									<li><button type="button" class="btn btn-default btn-view-profile" style="margin: 20px; display: none;">View Profile</button></li>
+								</ul> 
+							</div>
+
+							<div class="col-sm-7 col-page pagebar">
+								<div class="nav-offcanvas-wrapper">
+									<p class="nav-offcanvas visible-xs">
+										<button type="button" class="btn-offcanvas btn-edit-profile"><i class="glyphicon glyphicon-edit"></i></button>
+										<button type="button" class="btn-offcanvas btn-change-password"><i class="glyphicon glyphicon-lock"></i></button>
+										<button type="button" class="btn-offcanvas btn-view-profile" style="display: none"><i class="glyphicon glyphicon-user"></i></button>
+									</p>
+									
+								</div>
+								
+								<div class="page-content">
+									
+									<div id="view" class="toggle-nav">
+										<div class="box-header">
+											<p>Your Profile</p>
+										</div>
+										<div class="box-content-wrapper">
+											<div id="display-profile"></div>
+										</div>
+									</div>
+									
+									<div id="edit" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Edit Profile</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<!--<div id="display-edit-profile"></div>-->
+											<div><p id="update-msg"></p></div>
+											
+											<form id="form-edit-profile" class="form-box horizontal-form" role="form">
+												<div class="form-group form-row">
+													<label class="col-md-4 col-md-offset-1 control-label">First name:</label>
+													<div class="col-md-7">
+														<input id="f-name" class="form-control" type="text" name="f-name" pattern="^[a-zA-Z\\s]*$" required>
+													</div>
+												</div>
+												
+												<div class="form-group form-row">
+													<label class="col-md-4 col-md-offset-1 control-label">Middle name:</label>
+													<div class="col-md-7">
+														<input id="m-name" class="form-control" type="text" name="m-name" pattern="^[a-zA-Z\\s]*$" required>
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-4 col-md-offset-1 control-label">Last name:</label>
+													<div class="col-md-7">
+														<input id="l-name" class="form-control" type="text" name="l-name" pattern="^[a-zA-Z\\s]*$" required>
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-4 col-md-offset-1 control-label">Mobile #:</label>
+													<div class="col-md-7">
+														<input id="mobile" class="form-control" type="tel" name="mobile" required>
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-4 col-md-offset-1 control-label">Email1:</label>
+													<div class="col-md-7">
+														<input id="email1" class="form-control" type="email" name="email1" required>
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-4 col-md-offset-1 control-label">Email2:</label>
+													<div class="col-md-7">
+														<input id="email2" class="form-control" type="email" name="email2">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-4 col-md-offset-1 control-label">Address:</label>
+													<div class="col-md-7">
+														<textarea id="address" class="form-control" type="text" name="address" rows="3" required></textarea>
+													</div>
+												</div>
+												
+												<div class="form-group alert">
+													<label class="col-md-8 col-md-offset-1 control-label">Receive Instant Email updates: </label>
+													<div class="col-md-2">
+														<input id="email-alert" type="checkbox" name="email-alert">
+													</div>
+													
+													<!--
+													<div >
+														<label class="col-md-8 col-md-offset-1 control-label"><input id="email-alert" type="checkbox" name="email-alert"> Receive Instat Email updates: </label>
+													</div>
+													-->
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-sm-4 col-md-offset-2 col-xs-6">
+														<input type="submit" class="btn btn-default btn-update-profile" value="Update" style="margin-top:1.5em"/>
+													</div>
+													
+													<div class="col-sm-4 col-xs-6">
+														<input id="btn-edit-profile-cancel" type="submit" class="btn btn-default" value="Cancel" style="margin-top:1.5em"/>
+													</div>
+													
+													<!--
+													<div class="col-sm-4">
+														<a href="pprofile.html" class="btn btn-default" style="margin-top:1.5em">Cancel</a>
+													</div>
+													-->
+												</div>
+											</form>		
+											<!--
+											<form id="form-edit-profile" class="form-box horizontal-form" role="form">
+												<div class="form-group">
+													<label class="col-md-3 control-label">First name:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="Amit">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Middle name:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="Vijaykumar">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Last name:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="Supugade">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Phone:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="9970978481">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">About you:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="amit.supugade@gmail.com">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Address:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="amit.supugade@gmail.com">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Email:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="amit.supugade@gmail.com">
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-3 control-label">Username:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="text" value="amit1234">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Password:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="password" value="noblepeer123">
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Confirm password:</label>
+													<div class="col-md-8">
+														<input class="form-control" type="password" value="noblepeer123">
+													</div>
+												</div>
+												
+												
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input type="submit" class="btn btn-default btn-update-profile" value="Update" style="margin-top:1.5em"/>
+													</div>
+													<div class="col-sm-3">
+														<a href="pprofile.html" class="btn btn-default" style="margin-top:1.5em">Cancel</a>
+													</div>
+												</div>
+												
+												
+												<div class="form-group">
+												
+													<div class="col-md-8 col-md-offset-3">
+													  <input type="button" class="btn btn-primary" value="Save Changes">
+													  <span></span>
+													  <input type="reset" class="btn btn-default" id="btn-edit-profile-cancel"value="Cancel">
+													</div>
+													
+												</div>
+											</form>
+											-->
+										</div>
+									</div>
+									
+									<div id="change" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Change Password</p>
+										</div>
+										<div class="box-content-wrapper">
+											<form id="form-change-passwd" class="form-box horizontal-form" role="form">
+												<div class="form-group">
+													<label class="col-md-4 col-sm-offset-1 control-label">Enter Old Password:</label>
+													<div class="col-md-7">
+														<input id="old-pwd" class="form-control" type="password" name="old-pwd" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 col-sm-offset-1 control-label">Enter New Password:</label>
+													<div class="col-md-7">
+														<input id="new-pwd" class="form-control" type="password" name="new-pwd" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 col-sm-offset-1 control-label">Confirm New Password:</label>
+													<div class="col-md-7">
+														<input id="new-pwd-again" class="form-control" type="password" name="new-pwd-again" required>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-sm-4 col-md-offset-2 col-xs-6">
+														<input type="submit" class="btn btn-default btn-change-passwd" value="Change Password" style="margin-top:1.5em"/>
+													</div>
+													
+													<div class="col-sm-4 col-xs-6">
+														<input id="btn-change-password-cancel" type="submit" class="btn btn-default" value="Cancel" style="margin-top:1.5em"/>
+													</div>
+												</div>
+												
+											</form>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Noblepeer</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css"> 
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+    <script src="test.js"></script>
+	
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand hidden-xs" href="test.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="test.html">NoblePeer</a>
+					<p id="school-name" class="navbar-text hidden-xs" style="color:yellow;"></p>
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="test.html">Home</a></li>
+								<li><a href="pprofile.html">Profile</a></li>
+								<li><a href="school.html">School</a></li>
+								<li><a id="logout" href="index.html">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--
+					<div class="col-sm-4">
+						<p>Class:2A</p>
+					</div> -->
+				</div>
+				
+				
+				
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<div class="row">
+				<div class="row-offcanvas row-offcanvas-left">	
+					<div class="row-offcanvas row-offcanvas-right">
+						<div class="row">
+							<div class="col-sm-3 col-md-2 col-page-left nopadding sidebar-offcanvas sidebar-offcanvas-left" role="navigation">
+								<div class="box-header box-header-left">
+									<p id="welcome-msg"></p>
+								</div>
+								
+								<ul class="sidebar-nav">
+									<li><a id="nav-home" href="test.html" class="visible-xs"><img class="icon" src="images/icons/homeIcon.png" /> Home</a></li>
+									<li><a id="nav-announcement" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/annIcon.png" /> Announcements</a></li>
+									<li><a id="nav-notice" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/noticeIcon.png" /> Notices</a></li>
+									<li><a id="nav-homework" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/hwIcon.png" /> Homework</a></li>
+									<li><a id="nav-attendance" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/attIcon.png" /> Attendance</a></li>
+									<li><a id="nav-meeting" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/meetingIcon.png" /> Meeting</a></li>
+									<li><a id="nav-event" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/eventIcon.png" /> Event</a></li>
+									<li><a id="nav-grade" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/gradeIcon.png" /> Grades</a></li>
+									<li><a id="nav-attention" href="#" data-toggle="offcanvas-left" ><img class="icon" src="images/icons/requestIcon.png" /> Need Response</a></li>
+									<li><a id="nav-leave" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/leaveIcon.png" /> Leave</a></li>
+									<li><a id="nav-tinfo" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/teacherIcon.png" /> Teacher's Info</a></li>
+								</ul>
+								<hr class="visible-xs" style="width: 95%; color: darkgray; height: 1px; background-color: darkgray;"/>
+								<div class="row visible-xs sc-xs">
+									<div class="col-xs-offset-1">
+										<p id="school-name-xs" class="visible-xs"></p>
+										<p id="class-name-xs" class="visible-xs"></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-5 col-md-6 col-page pagebar">
+								<div class="nav-offcanvas-wrapper">
+									<p class="nav-offcanvas visible-xs">
+										<button type="button" class="btn-offcanvas" data-toggle="offcanvas-left"><i class="glyphicon glyphicon-education"></i></button>
+										<button type="button" class="btn-offcanvas" data-toggle="offcanvas-right"><i class="glyphicon glyphicon-bell"></i></button>
+									</p>
+								</div>
+								
+								<div class="page-content">
+									<div id="home" class="toggle-nav">
+										
+										<div class="box-header">
+											<div class="row">
+												<div class="col-sm-6 col-md-7">
+													<p id="day-date"></p>
+												</div>
+												<div class="col-sm-6 col-md-5 hidden-xs">
+													<p id="class-name"></p>
+												</div>
+											</div>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>Homework Due</p>
+												</div>
+
+												<div id="today-homework" class="post-content"></div>
+											</div>
+											
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>Events</p>
+												</div>
+
+												<div id="today-event" class="post-content"></div>
+											</div>
+
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>Meetings</p>
+												</div>
+
+												<div id="today-meeting" class="post-content"></div>
+											</div>
+
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>Leave</p>
+												</div>
+
+												<div id="today-leave" class="post-content"></div>
+											</div>
+											
+											<div class="post">
+												<div class="post-header">
+													<p>Today</p>
+												</div>
+
+												<div id="today" class="post-content"></div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="attendance" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Attendance</p>
+										</div>
+										<div class="box-content-wrapper">
+											<div class="post">
+												<div class="post-header">
+													<p>Student Attendance Report</p>
+												</div>
+
+												<div class="post-content-table">
+													<div id="display-student-attendance" class="table-responsive"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="announcement" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Announcements </p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div id="display-announcements"></div>
+										</div>
+									</div>
+									
+									<div id="notice" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Notices</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div id="display-notices"></div>
+										</div>
+									</div>
+									
+									<div id="homework" class="toggle-nav" style="display:none">	
+										<div class="box-header">
+											<p>Homework</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<ul class="nav nav-tabs" role="tablist">
+												<li role="presentation" class="active"><a id="get-due-homework" href="#due-homework" aria-controls="due-homework" role="tab" data-toggle="tab">Due homeworks</a></li>
+												<li role="presentation"><a id="get-homework" href="#old-homework" aria-controls="old-homework" role="tab" data-toggle="tab">Past homeworks</a></li>
+											</ul>
+											<div class="tab-content">
+												<div role="tabpanel" class="tab-pane active" id="due-homework">
+													<div class="box-content-wrapper">
+														<div id="display-due-homework"></div>
+													</div>
+												</div>
+												
+												<div role="tabpanel" class="tab-pane" id="old-homework">
+													<div class="box-content-wrapper">
+														<div id="display-past-homework"></div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									
+									<div id="meeting" class="toggle-nav" style="display:none">
+										
+										<div class="box-header">
+											<p>Meeting</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<ul class="nav nav-tabs nav-tabs-meeting" role="tablist">
+												<li role="presentation" class="active"><a id="new-meeting" href="#request-meeting" aria-controls="request-meeting" role="tab" data-toggle="tab">Schedule Meeting</a></li>
+												<li role="presentation"><a id="imeeting-tab" href="#my-meeting" aria-controls="my-meeting" role="tab" data-toggle="tab">Your Meetings</a></li>
+											</ul>
+
+											<div class="tab-content tabs-meeting">
+												<div role="tabpanel" class="tab-pane active" id="request-meeting">
+													<form id="post-meeting" class="form-box horizontal-form" role="form">
+														<div class="form-group row">
+															<div class="col-sm-6">
+																<label for="inputType" class="control-label">Meeting Date: </label>
+																<div class="input-group">
+																	<input type="text" id="meeting-date" name="meeting-date" class="form-control" value="Select date" pattern="((19|20)\d\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])" required>
+																	<label class="input-group-addon btn-datetime" for="meeting-date">
+																		<span class="glyphicon glyphicon-calendar"></span>
+																	</label>                    
+																</div>
+															</div>
+														</div>
+														
+														<div class="form-group row">
+															<div class="col-sm-6">
+																<label for="inputType" class="control-label">Start Time: </label>
+																<div class=" input-group">
+																	<input type="text" id="meeting-start-time" name="meeting-start-time" class="form-control" pattern="(1[012]|[1-9]):[0-5][0-9] (AM|PM)" value="11:00 AM" required>
+																	<label class="input-group-addon btn-datetime" for="meeting-start-time">
+																		<span class="glyphicon glyphicon-time"></span>
+																	</label>                    
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<label for="inputType" class="control-label">End Time: </label>
+																<div class=" input-group">
+																	<input type="text" id="meeting-end-time" name="meeting-end-time" class="form-control" pattern="(1[012]|[1-9]):[0-5][0-9] (AM|PM)" value="11:30 AM" required>
+																	<label class="input-group-addon btn-datetime" for="meeting-end-time">
+																		<span class="glyphicon glyphicon-time"></span>
+																	</label>                    
+																</div>
+															</div>
+														</div>
+														
+														<div class="form-group">
+															<label for="meeting-subject">Meeting Subject:</label>
+															<textarea name="meeting-subject" class="form-control" rows="1" placeholder="What the meeting is about?" required></textarea>
+														</div>
+														
+														<div class="form-group">
+															<label for="meeting-details">Meeting Details:</label>
+															<textarea name="meeting-details" class="form-control" rows = "4" placeholder="Describe Meeting minutes/reason" required></textarea>
+														</div>
+													
+														<div class="form-group row">
+															<div class="col-sm-3">
+																<input name="btn-new-meeting" class="btn btn-default" type="submit" value="Submit">
+															</div>
+															<div class="col-sm-9">
+																<span id="post-meeting-msg"></span>
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div role="tabpanel" class="tab-pane" id="my-meeting">
+													<div id="display-meeting"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="event" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Events</p>
+										</div>
+										<div class="box-content-wrapper">
+											<div id="display-events"></div>
+										</div>
+									</div>
+										
+									<div id="leave" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Leave</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<ul class="nav nav-tabs nav-tabs-leave" role="tablist">
+												<li role="presentation" class="active"><a id="new-leave-tab" href="#request-leave" aria-controls="request-leave" role="tab" data-toggle="tab">Request leave</a></li>
+												<li role="presentation"><a id="get-leaves" href="#past-leave" aria-controls="past-leave" role="tab" data-toggle="tab">Leaves Record</a></li>
+											</ul>
+											
+											<div class="tab-content tabs-leave">
+												<div role="tabpanel" class="tab-pane active" id="request-leave">
+													<form id="post-leave" class="form-box horizontal-form" role="form">
+														<div class="form-group row">
+															<div class="col-sm-6">
+																<label for="inputType" class="control-label">Date: </label>
+																<div class="input-group">
+																	<input type="text" id="leave-date" name="leave-date" class="form-control" value="Select date" pattern="((19|20)\d\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])" required>
+																	<label class="input-group-addon btn-datetime" for="leave-date">
+																		<span class="glyphicon glyphicon-calendar"></span>
+																	</label>                    
+																</div>
+															</div>
+														</div>
+
+														<div class = "form-group">
+															<label for="leave-reason">Reason:</label>
+															<textarea name="leave-reason" class = "form-control" rows = "4" placeholder="Describe the reason for leave" required></textarea>
+														</div>
+														
+														<div class="form-group row">
+															<div class="col-sm-3">
+																<input name="btn-post-leave" class="btn btn-default" type="submit" value="Submit">
+															</div>
+															<div class="col-sm-9">
+																<span id="post-leave-msg"></span>
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div role="tabpanel" class="tab-pane" id="past-leave">
+													<div id="display-leaves"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="grade" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Grades</p>
+										</div>
+										<div class="box-content-wrapper">
+											<div class="post">
+												<div class="post-header">
+													<p>Grade Report</p>
+												</div>
+
+												<div class="post-content-table">
+													<div id="display-student-report" class="table-responsive"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="attention" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Need Attention</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div id="mtg-na-response"></div>
+											<div id="display-na-meeting"></div>
+										</div>
+									</div>
+									
+									<div id="tinfo" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Teacher</p>
+										</div>
+										<div class="box-content-wrapper">
+											<div id="display-teacher_info"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-page nopadding sidebar-offcanvas sidebar-offcanvas-right" role="navigation">
+								<div class="nav-offcanvas-wrapper">
+									<p class="nav-offcanvas visible-xs">
+										<button type="button" class="btn-offcanvas" data-toggle="offcanvas-right" onclick="location.href='test.html'"><i class="glyphicon glyphicon-home"></i></button>
+									</p>
+								</div>
+								<div class="box-header">
+									<p>Notifications</p>
+								</div>
+								<input id="btn-nf-reload" type="button" class="btn-default" style="display:none">
+								<div id="nf-content" class="box-content-wrapper">
+									
+									<div id="nf-recent" class="post">
+										<div class="post-header">
+											<p>Recent Activity</p>
+										</div>
+
+										<div id="nf-recents" class="post-content">
+										</div>
+									</div>
+									
+									<div class="post">
+										<div class="post-header">
+											<p>Upcoming Meetings</p>
+										</div>
+
+										<div id="nf-upcoming-meeting" class="post-content">
+										</div>
+									</div>
+									
+									<div class="post">
+										<div class="post-header">
+											<p>Upcoming Events</p>
+										</div>
+
+										<div id="nf-upcoming-event" class="post-content">
+										</div>
+									</div>
+									
+									<div class="post">
+										<div class="post-header">
+											<p>Upcoming Leaves</p>
+										</div>
+
+										<div id="nf-upcoming-leave" class="post-content">
+										</div>
+									</div>
+									
+									<!--
+									<div class="post">
+										<div class="post-header">
+											<p>New requests</p>
+										</div>
+
+										<div id="nf-new-attention" class="post-content">
+										</div>
+									</div>
+									-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

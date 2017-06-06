@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--
+	<meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+	-->
+	<title>Noblepeer</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css"/> 
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+	<link rel="stylesheet" href="test.css"/>
+	<link rel="stylesheet" href="profile.css"/>
+	<link rel="stylesheet" href="css/animate.min.css"/>
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script src="add_school.js"></script>
+	<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>-->
+    
+	
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand hidden-xs" href="ttest.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="ttest.html">NoblePeer</a>
+					<p id="school-name" class="navbar-text hidden-xs" style="color:yellow;">Welcome! </p>
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="index.html">Home</a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>		
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<form id="add-school-form" class="form-box horizontal-form" role="form">
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">School Name:</label>
+					<div class="col-md-5">
+						<input id="school-name" class="form-control" type="text" name="school-name" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">School Registration Number:</label>
+					<div class="col-md-5">
+						<input id="reg-number" class="form-control" type="text" name="reg-number" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Established Year:</label>
+					<div class="col-md-5">
+						<input id="year" class="form-control" type="number" name="year" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Website:</label>
+					<div class="col-md-5">
+						<input id="website" class="form-control" type="text" name="website" required>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-md-3 col-md-offset-2 control-label">Address:</label>
+					<div class="col-md-5">
+						<textarea id="address" class="form-control" type="text" name="address" rows="3" required></textarea>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">City/Town:</label>
+					<div class="col-md-5">
+						<input id="city" class="form-control" type="text" name="city" pattern="^[a-zA-Z\\s]*$" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Pin Code:</label>
+					<div class="col-md-5">
+						<input id="pin" class="form-control" type="number" name="pin" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Phone Number:</label>
+					<div class="col-md-5">
+						<input id="phone-number" class="form-control" type="tel" name="phone-number" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Email:</label>
+					<div class="col-md-5">
+						<input id="email" class="form-control" type="email" name="email" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Admin username:</label>
+					<div class="col-md-5">
+						<input id="username" class="form-control" type="text" name="username" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Password:</label>
+					<div class="col-md-5">
+						<input id="password" class="form-control" type="password" name="password" required>
+					</div>
+				</div>
+				
+				<div class="form-group form-row">
+					<label class="col-md-3 col-md-offset-2 control-label">Re-enter Password:</label>
+					<div class="col-md-5">
+						<input id="password-check" class="form-control" type="password" name="password-check" required>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-sm-1 col-md-offset-3">
+						<input name="btn-add-school" class="btn btn-default" type="submit" value="Add School" style="margin-top:1.5em" />
+					</div>
+					<div class="col-sm-7">
+						<span id="add-school-msg"></span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

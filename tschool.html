@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>School Page</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link href="css/ekko-lightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="school.css">
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<script src="js/ekko-lightbox.min.js"></script>
+    <script src="tschool.js"></script>
+	
+	
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand hidden-xs" href="ttest.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="ttest.html">NoblePeer</a>
+					
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="ttest.html">Home</a></li>
+								<li><a href="tprofile.html">Profile</a></li>
+								<li><a href="tschool.html">School</a></li>
+								<li><a id="logout" href="index.html">Logout</a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<div class="row">
+				<div class="row-offcanvas row-offcanvas-left">	
+					<div class="row-offcanvas row-offcanvas-right">
+						<div class="row">
+							<div class="col-sm-3 col-md-2 col-page-left nopadding sidebar-offcanvas sidebar-offcanvas-left" role="navigation">
+								<div class="box-header box-header-left">
+									<p id="welcome-msg"></p>
+								</div>
+								
+								<ul class="sidebar-nav">
+									<li><a id="nav-home" href="ttest.html" class="visible-xs"><img class="icon" src="images/icons/homeIcon.png" /> Home</a></li>
+									<li><a id="nav-holiday" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/annIcon.png" /> Holidays </a></li>
+									<li><a id="nav-gallary" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/noticeIcon.png" />Gallary</a></li>
+									
+								</ul>
+								<hr class="visible-xs" style="width: 95%; color: darkgray; height: 1px; background-color: darkgray;"/>
+								<div class="row visible-xs sc-xs">
+									<div class="col-xs-offset-1">
+										<p id="school-name-xs" class="visible-xs"></p>
+										<p id="class-name-xs" class="visible-xs"></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-9 col-page pagebar">
+								<div class="nav-offcanvas-wrapper">
+									<p class="nav-offcanvas visible-xs">
+										<button type="button" class="btn-offcanvas" data-toggle="offcanvas-left"><i class="glyphicon glyphicon-education"></i></button>
+									</p>
+								</div>
+								
+								<div class="page-content">
+									
+									<div id="school" class="toggle-nav">	
+										<div class="box-content-wrapper">
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>About School</p>
+												</div>
+
+												<div id="display-school" class="post-content"></div>
+											</div>
+											
+										</div>
+									</div>
+									
+									<div id="holiday" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Holiday </p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div id="display-holiday" class="post-content-table table-responsive"></div>
+										</div>
+									</div>
+									
+									<div id="gallary" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Gallary </p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div id="display-gallary"></div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

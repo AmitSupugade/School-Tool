@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Noblepeer Admin</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css"> 
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+	<link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="admin.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link href="css/ekko-lightbox.min.css" rel="stylesheet">
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script src="js/ekko-lightbox.min.js"></script>
+    <script src="admin.js"></script>
+	
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand hidden-xs" href="admin.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="admin.html">NoblePeer</a>
+					<p id="school-name" class="navbar-text hidden-xs" style="color:yellow;"></p>
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="admin.html">Home</a></li>
+								<li><a id="logout" href="index.html">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--
+					<div class="col-sm-4">
+						<p>Class:2A</p>
+					</div> -->
+				</div>
+				
+				
+				
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<div class="row">
+				<div class="row-offcanvas row-offcanvas-left">	
+					<div class="row-offcanvas row-offcanvas-right">
+						<div class="row">
+							<div class="col-sm-3 col-md-2 col-page-left nopadding sidebar-offcanvas sidebar-offcanvas-left" role="navigation">
+								<div class="box-header box-header-left">
+									<p id="welcome-msg"></p>
+								</div>
+								
+								<ul class="sidebar-nav">
+									<li><a id="nav-home" href="admin.html" class="visible-xs"><img class="icon" src="images/icons/homeIcon.png" /> Home</a></li>
+									<li><a id="nav-teacher" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/teacherIcon.png" /> Add Teachers</a></li>
+									<li><a id="nav-class" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/classIcon.png" /> Add Classes</a></li>
+									<li><a id="nav-class-teacher" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/clsteacherIcon.png" /> Assign Teacher</a></li>
+									<li><a id="nav-subject" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/subjectIcon.png" /> Subjects</a></li>
+									<li><a id="nav-exam" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/examIcon.png" /> Exams</a></li>
+									<li><a id="nav-student" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/studentIcon.ico" /> Add Students</a></li>
+									<li><a id="nav-photo" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/photoIcon.png" /> Photos</a></li>
+									<li><a id="nav-holiday" href="#" data-toggle="offcanvas-left"><img class="icon" src="images/icons/holidayIcon.png" /> Holidays</a></li>
+								</ul>
+								<hr class="visible-xs" style="width: 95%; color: darkgray; height: 1px; background-color: darkgray;"/>
+								<div class="row visible-xs sc-xs">
+									<div class="col-xs-offset-1">
+										<p id="school-name-xs" class="visible-xs"></p>
+										<p id="class-name-xs" class="visible-xs"></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-9 col-md-10 col-page pagebar">
+								<div class="nav-offcanvas-wrapper">
+									<p class="nav-offcanvas visible-xs">
+										<button type="button" class="btn-offcanvas" data-toggle="offcanvas-left"><i class="glyphicon glyphicon-education"></i></button>
+									</p>
+								</div>
+								
+								<div class="page-content">
+									<div id="home" class="toggle-nav">
+										
+										<div class="box-header">
+											<div class="row">
+												<div class="col-sm-6 col-md-7">
+													<p id="day-date"></p>
+												</div>
+											</div>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<div class="post">
+												<div class="post-header" style="background-color: darkgray">
+													<p>About School</p>
+												</div>
+
+												<div class="box-content-wrapper">
+													<div id="display-school-info"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="teacher" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Teachers</p>
+										</div>
+										<div class="box-content-wrapper">
+											
+											<ul class="nav nav-tabs" role="tablist">
+												<li role="presentation" class="active"><a id="add-teacher-tab" href="#add-teacher" aria-controls="add-teacher" role="tab" data-toggle="tab">Add Teachers</a></li>
+												<li role="presentation"><a id="get-teacher-tab" href="#get-teacher" aria-controls="get-teacher" role="tab" data-toggle="tab">Teachers List</a></li>
+											</ul>
+
+											<div class="tab-content">
+												<div role="tabpanel" class="tab-pane active" id="add-teacher">
+													<form id="export_teacher" method="post" enctype="multipart/form-data">
+														<div class="form-group">
+															<label for="file-teacher">Select file:</label>
+															<input id="file-teacher" type="file" name="file-teacher">
+														</div>
+
+														<div class="form-group row">
+															<div class="col-sm-3">
+																<input name="btn-teacher-upload" class="btn btn-default" type="submit" value="Upload">
+															</div>
+															<div class="col-sm-9">
+																<span id="teacher-upload-msg"></span>
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div role="tabpanel" class="tab-pane" id="get-teacher">
+													<div id="display-teachers" class="table-responsive"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="class" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Add Classes </p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="add-class" class="form-box horizontal-form" role="form">
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="class-select">Select Classes to add in school: </label>
+														<select name="class[]" id="class-select" multiple="multiple" role="multiselect" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-add-class" class="btn btn-default" type="submit" value="Submit">
+													</div>
+													<div class="col-sm-9">
+														<span id="add-class-msg"></span>
+													</div>
+												</div>
+											</form>
+											
+											<div id="display-class" class="post-content-table table-responsive"></div>
+										</div>
+									</div>
+									
+									<div id="class-teacher" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Assign Teacher</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="assign-class-teacher" method="post">
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="ct-class-select">Select Class: </label>
+														<select name="ct-class" id="ct-class-select" size="2" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="teacher-select">Select Class teacher: </label>
+														<select name="teacher" id="teacher-select" size="2" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-add-ct-class" class="btn btn-default" type="submit" value="Submit">
+													</div>
+													<div class="col-sm-9">
+														<span id="class-teacher-msg"></span>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									
+									<div id="subject" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Subjects</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="add-subject" class="form-box horizontal-form" role="form">
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="sub-class-select">Select Class: </label>
+														<select name="sub-class" id="sub-class-select" size="2" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="subject-select">Select Subject: </label>
+														<select name="subject[]" id="subject-select" multiple="multiple" role="multiselect" required></select>
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-subject" class="btn btn-default" type="submit" value="Submit">
+													</div>
+													<div class="col-sm-9">
+														<span id="add-subject-msg"></span>
+													</div>
+												</div>
+											</form>
+											
+											<div id="display-subject" class="post-content-table table-responsive"></div>
+										</div>
+									</div>
+									
+									<div id="exam" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Exams</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="add-exam" class="form-box horizontal-form" role="form">
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="exm-class-select">Select Class: </label>
+														<select name="exm-class" id="exm-class-select" size="2" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="exam-select">Select Exam: </label>
+														<select name="exam[]" id="exam-select" multiple="multiple" role="multiselect" required></select>
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-exam" class="btn btn-default" type="submit" value="Submit">
+													</div>
+													<div class="col-sm-9">
+														<span id="add-exam-msg"></span>
+													</div>
+												</div>
+											</form>
+											
+											<div id="display-exam" class="post-content-table table-responsive"></div>
+										</div>
+									</div>
+									
+									<div id="student" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Add Students</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="export_student" method="post" enctype="multipart/form-data">
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label for="student-class-select">Select Class: </label>
+														<select name="student-class" id="student-class-select" size="2" required></select>
+													</div>
+												</div>
+												
+												<div class="form-group">
+													<label for="file-student">Select file:</label>
+													<input id="file-student" type="file" name="file-student">
+												</div>
+												
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-student-upload" class="btn btn-default" type="submit" value="Upload">
+													</div>
+													<div class="col-sm-9">
+														<span id="student-upload-msg"></span>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									
+									<div id="photo" class="toggle-nav" style="display:none">
+										<div class="box-header">
+											<p>Photos</p>
+										</div>
+										<div class="box-content-wrapper">
+											
+											<ul class="nav nav-tabs" role="tablist">
+												<li role="presentation" class="active"><a id="add-photo-tab" href="#add-photo" aria-controls="add-photo" role="tab" data-toggle="tab">Add Photos</a></li>
+												<li role="presentation"><a id="get-gallery-tab" href="#get-gallery" aria-controls="get-gallery" role="tab" data-toggle="tab">Gallery</a></li>
+											</ul>
+
+											<div class="tab-content">
+												<div role="tabpanel" class="tab-pane active" id="add-photo">
+													<h4>Create Album</h4>
+													<form id="add-album" method="post" style="margin-top: 20px;">
+														<div class="form-group row">
+															<div class="col-md-6">
+																<label for="album-title">Album Title:</label>
+																<textarea name="album-title" class="form-control" rows = "1" placeholder="Name of the Album" required></textarea>
+															</div>
+														</div>
+
+														<div class="form-group row">
+															<div class="col-sm-3">
+																<input name="btn-add-album" class="btn btn-default" type="submit" value="Add Album">
+															</div>
+															<div class="col-sm-9">
+																<span id="add-album-msg"></span>
+															</div>
+														</div>
+													</form>
+													<hr style="width: 95%; color: darkgray; height: 1px; background-color: darkgray;"/>
+													<h4>Select Album and Add Photos</h4>
+													<form id="add-photo-form" class="form-box horizontal-form" role="form" enctype="multipart/form-data">
+														
+														<div class="form-group row">
+															<div class="col-md-6">
+																<label for="album-select">Select Album: </label>
+																<select name="photo-album" id="album-select" size="2" required>
+																</select>
+															</div>
+														</div>
+														
+														<div class="form-group">
+															<label for="file-photo">Select Photos:</label>
+															<input id="file-photo" type="file" name="file-photo[]" multiple required>
+														</div>
+														
+														<div class="form-group row">
+															<div class="col-sm-3">
+																<input name="btn-add-photo" class="btn btn-default" type="submit" value="Add Photo">
+															</div>
+															<div class="col-sm-9">
+																<span id="add-photo-msg"></span>
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div role="tabpanel" class="tab-pane" id="get-gallery">
+													<div class="box-content-wrapper">
+														<div id="display-gallary"></div>
+													</div>
+												</div>
+												
+											</div>
+											
+											
+											
+										</div>
+									</div>
+												
+									<div id="holiday" class="toggle-nav" style="display:none">								
+										<div class="box-header">
+											<p>Add Holidays</p>
+										</div>
+										
+										<div class="box-content-wrapper">
+											<form id="post-holiday" class="form-box horizontal-form" role="form">
+												<div class="form-group row">
+													<div class="col-sm-6">
+														<label for="inputType" class="control-label">Holiday Date: </label>
+														<div class="input-group">
+															<input type="text" id="holiday-date" name="holiday-date" class="form-control" value="Select date" pattern="((19|20)\d\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])" required>
+															<label class="input-group-addon btn-datetime" for="holiday-date">
+																<span class="glyphicon glyphicon-calendar"></span>
+															</label>                    
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<div class="col-sm-3">
+														<input name="btn-holiday" class="btn btn-default" type="submit" value="Submit">
+													</div>
+													<div class="col-sm-9">
+														<span id="post-holiday-msg"></span>
+													</div>
+												</div>
+											</form>
+											
+											<div id="display-holiday" class="post-content-table table-responsive"></div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

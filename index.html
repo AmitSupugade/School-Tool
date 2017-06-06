@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- 
+1. Colors
+2. Text visibility in navbar- need to customise bootstrap to use white background in navbar
+3. Choose appropriate font
+4. 
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Noblepeer</title>
+	<link rel="icon" href="images/icon.ico" type="image/ico" />
+    
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- Bootstrap Date-Picker Plugin -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<link rel="stylesheet" href="css/datepicker.css"> 
+	 
+	<!-- Bootstrap Time-Picker Plugin -->
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	 
+	<!-- Noblepeer Plugin -->
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+	<script scr="js/smoothscroll.js"></script>
+	  
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	  
+  </head>
+  
+	<body data-spy="scroll" data-offset="0" data-target=".navbar">
+	
+	<nav id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">	
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+					<span class="sr-only">Menu</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>	
+			</div> <!-- navbar-header END -->
+			<div class="collapse navbar-collapse" id="navbar-links">
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="#home" class="smoothScroll collapsable"><b>Home</b></a></li>
+					<li> <a href="#about" class="smoothScroll collapsable"><b>About</b></a></li>
+					<li> <a href="#services" class="smoothScroll collapsable"><b>Features</b></a></li>
+					<li> <a href="#team" class="smoothScroll collapsable"><b>Team</b></a></li>
+					<li> <a href="#contact" class="smoothScroll collapsable"><b>Contact</b></a></li>
+					<li> <a href="add_school.html" class="smoothScroll collapsable"><b>Add Your School</b></a></li>
+					<li class="dropdown">
+					  	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<div class="row">
+								<div class="col-md-12">
+									<form id="login-form" name="login-form" class="form" role="form" method="POST">
+										<div class="form-group" name="username">
+											 <label class="sr-only" for="username">Username</label>
+											 <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="password">Password</label>
+											 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+											
+											 <div class="help-block text-right"><a href="forgot_password.html">Forget the password ?</a></div>
+											
+
+										</div>
+										<div class="form-group">
+											 <button name="btn-login" id="btn-login" type="submit" class="btn btn-primary btn-block">Sign in</button>
+										</div>
+										<!--
+										<div class="checkbox">
+											 <label>
+											 <input type="checkbox" name="checkbox-login"> keep me logged-in
+											 </label>
+										</div>
+										-->
+
+									</form>
+									<div class="error" id="add_error"></div>
+								</div>
+							</div>
+						</ul>
+					</li>	
+				</ul>
+			</div>
+		</div> <!-- navbar-collapse END -->
+	</nav>
+	    
+	  <!-- ==== HOME ==== -->
+<div id="home" name="home">
+  <div class="container">
+    <div class="row">
+	<h2> </h2>
+	  <div class="centered"> 
+			<img id="imgTop" class="centered animated bounce" src="images/Noblepeer1.png" style="width:100%;height:50%" alt="image" />
+	  </div>
+	  <hr>
+      <div class="centered animated tada">
+        <h3>Towards better education</h3>
+      </div>
+    </div>
+    <!-- row --> 
+  </div>
+</div>
+<!-- container --> 
+
+<!-- ==== ABOUT ==== -->
+<div id="about" name="about">
+  <div class="container">
+    <div class="row white">
+      <h2 class="centered">ABOUT US</h2>
+      <hr>
+      <div class="col-md-6"> <img class="img-responsive" src="images/about/about1.jpg" align=""> </div>
+      <div class="col-md-6">
+        <h3>Who we are</h3>
+        <p class="large">We are Pune based software company. We recently launched Beta version of our platform. We are committed to facilitate communication in order to improve the quality of education. We believe our ideas will make education efficient and effective.</p>
+      </div>
+    </div>
+    <!-- row --> 
+  </div>
+</div>
+<!-- container --> 
+
+<!-- ==== SERVICES ==== -->
+<div id="services" name="services">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">FEATURES</h2>
+      <hr>
+		
+      <div class="col-md-8  col-md-offset-2 centered">
+        <h3>NoblePeer brings Schools and Parents closer together.</h3>
+      </div>
+		
+      <div class="col-md-5 col-md-offset-1 top-margin">
+        <h3>Why involve Parents</h3>
+          <!--
+		  <p class="large">This is the platform to improve the Graduate education level and make it more productive.</p>
+		  -->
+		  <ul>
+		  	<li class="li-benefits">Child consistently achieve better academic results</li>
+			<li class="li-benefits">Boosts confidence, self-discipline, motivation</li>
+			<li class="li-benefits">Accelerate child's physical and mental development</li>
+			<li class="li-benefits">Understand and encourage child's interests, abilities</li>
+			<li class="li-benefits">Better teacher morale and performance</li>
+		  </ul>
+	  </div>
+		
+      <div class="col-md-5 col-md-offset-1  top-margin">
+        <h3>Why Noblepeer</h3>
+		  <!--
+        <p class="large">This is the platform for easier and efficient communication between teachers and parents.</p>
+		  -->
+		  <ul>
+		  	<li class="li-benefits">Facilitate communication between Parent-teachers</li>
+			<li class="li-benefits">Incorporates parents in learning process</li>
+			<li class="li-benefits">Instant update of daily school activities</li>
+			<li class="li-benefits">Provides access to all records all the time</li>
+			<li class="li-benefits">Much Simpler and easier to use platform</li>
+		  </ul>
+      </div>
+    </div>
+    <!-- row --> 
+  </div>
+</div>
+<!-- container --> 
+
+<!-- ==== TEAM MEMBERS ==== -->
+<div id="team" name="team">
+  <div class="container">
+    <div class="row centered">
+      <h2 class="centered">MEET OUR TEAM</h2>
+      <hr>
+	  <div>
+		  <p class="large-centered"> We are passionate about what we do and often come up with innovative ideas to take our platform to the next level.  We strongly believe in peer collaboration. So far we have had an amazing journey and we will be continuing it.</p>
+		  <!--
+        <p class="large">Our team is growing faster and we are continuously looking for talented people to join our team <br>and contribute their efforts to make out platform a success.</p>
+		  -->
+      </div>
+      <div class="col-lg-5 col-lg-offset-1"> <img class="img img-circle" src="images/team/team02.jpg" height="120px" width="120px" alt="">
+        <h3>Amit</h3>
+        <p class="large">Amit is co-founder of Noblepeer. He graduated with MS degree from Northeastern University, Boston USA. Amit works on product design, development and company operations. He enjoys outdoor activities and advantures.</p>
+        <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> </div>
+      <div class="col-lg-5 col-lg-offset-1"> <img class="img img-circle" src="images/team/team03.jpg" height="120px" width="120px" alt="">
+        <h3>Vishal</h3>
+        <p class="large">Vishal is co-founder of Noblepeer. He graduated with MBA degree. His responsibilities mainly includes branding, product development and company relations. Vishal like to go on hikes and enjoys spending time with family. </p>
+        <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> </div>
+     
+    </div>
+  </div>
+  <!-- row --> 
+</div>
+<!-- container --> 
+
+<!-- ==== CONTACT ==== -->
+<div id="contact" name="contact">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">CONTACT US</h2>
+      <hr>
+      <div class="col-md-4 centered"> <i class="fa fa-map-marker fa-2x"></i>
+        <p class="large">D24 Aditya Garden Flora,<br>
+          Warje, Pune 411058.</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p class="large">amit.supugade@noblepeer.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+        <p class="large"> +91 9689497053</p>
+      </div>
+    </div>
+	
+	<!--
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <p>Feel free to ask questions or share your thoughts with us. We would be glad to hear from you.</p>
+        <form id="contact" method="post" class="form" role="form">
+          <div class="row">
+            <div class="col-xs-6 col-md-6 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
+            </div>
+            <div class="col-xs-6 col-md-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+            </div>
+          </div>
+          <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <button class="btn btn btn-lg" type="submit">Send Message</button>
+            </div>
+          </div>
+        </form> -->
+        <!-- form --> 
+		<!--
+      </div>
+    </div> -->
+    <!-- row --> 
+    
+  </div>
+</div>
+<!-- container -->
+
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> <span class="copyright">Copyright &copy; 2015 NoblePeer.com. Design by <a href="http://www.noblepeer.com" rel="nofollow">NoblePeer Software Ltd.</a></span> </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+	<!--
+	<div class="container-fluid page-wrapper">
+		<div class="row">
+
+			<div class="col-md-offset-8 col-md-4 col-sm-4">
+				<div class="row">
+					<form class="box login-forme" role="form">
+
+						<div class="input-group form-group">
+							<p><strong>Username:</strong></p>
+							<input class="form-control" placeholder="username" name="username" type="username" autofocus>          
+						</div>
+						<div class="input-group form-group">
+							<p><strong>Password:</strong></p>
+							<input class="form-control" placeholder="Password" name="password" type="password" value="">          
+						</div>
+						
+						<div class="checkbox">
+							<label>
+							<input name="remember" type="checkbox" value="Remember Me">Remember Me
+							</label>	
+						</div>
+
+						<input class="btn btn-default" type="submit" value="Login">
+					</form>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+	  -->
+  </body>
+</html>

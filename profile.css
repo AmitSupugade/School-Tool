@@ -1,0 +1,30 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.form-group {
+	padding-bottom: 2em;
+}
+
+.btn-default {
+	margin-top: 1.5em;
+}
+
+.p-label {
+	font-weight: bold;
+}
+
+.alert {
+	padding-top: 5em;
+}
+.row {
+	padding-bottom: 1em;
+}
+
+/* For screens smaller than 767px */
+@media screen and (max-width: 991px) {
+	.form-group {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

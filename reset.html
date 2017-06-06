@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Noblepeer</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico" />
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css"> 
+	<link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	
+	<!-- JS -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<script src="forgot.js"></script>
+	
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<body>
+		<?php 
+			$encrypt = $_GET['en'];
+			$encrypt="TEST";
+		?>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">	
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">	
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand hidden-xs" href="index.html"><img alt="Brand" src="images/Noblepeer1.png"></a>
+                    <a class="navbar-brand visible-xs" href="index.html">NoblePeer</a>
+				</div> <!-- navbar-header END -->
+					
+				<div class="row">
+					<div class="col-sm-9 col-sm-offset-3 col-md-offset-2">
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="index.html">Home</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>		
+			</div> <!-- navbar-collapse END -->
+		</nav>
+		
+		<div id="page" class="container page">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<p>Please Enter your new Password.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<form id="reset-pwd" class="form-box horizontal-form" role="form">
+						<div class="form-group">
+							<label for="new-pwd">New Password:</label>
+							<textarea name="new-pwd" class="form-control" rows = "1" required></textarea>
+						</div>
+						
+						<div class="form-group">
+							<label for="con-new-pwd">Confirm New Password:</label>
+							<textarea name="con-new-pwd" class="form-control" rows = "1" required></textarea>
+						</div>
+
+						<div class="form-group row">
+							<div class="col-sm-3">
+								<input name="btn-reset-pwd" class="btn btn-default" type="submit" value="Submit">
+							</div>
+							<div class="col-sm-9">
+								<span id="reset-password-msg"></span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

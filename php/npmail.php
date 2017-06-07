@@ -839,8 +839,58 @@ function email_reset_passwd_link($id, $link) {
 	
 	//echo $message, $subject, $to;
 	return $result;
+}
+
+function email_forgot_username($email, $username) {
+	$result = array();
+	$conn = new Dbase();
 	
+	$to = $email;
+	$subject = "Noblepeer: Your username";
+	$message = '
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+			<meta name="format-detection" content="telephone=no"> 
+			<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+			<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		</head>
+		<body>
+			<div>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" valign="top" style="font-size: 1.5em; margin-top: 1em; margin-bottom: 2em; width: 100%; max-width: 640px;">
+					<tr>
+						<table>
+							<tr align="center" bgcolor="#E9E9E9">
+								<img src="http://demo.noblepeer.com/images/Noblepeer1.png" alt="Noblepeer" style="width: 100%; max-width: 400px;"/>
+							</tr>
+						</table>
+					</tr>
+					
+					<tr>
+						<p>Your username is ' . $username . '. </p>
+					</tr>
+					
+					<tr>
+						<table>
+							<tr>
+								<p style="color:gray">NOTE: This is an auto-generated email. Please do not reply to this email. If you have any questions, contact class teacher or school for details.</p>
+							</tr>
+							<tr>
+								<p style="color:gray">If you do not wish to receive such emails in future, Please update Instant Email preference in your Noblepeer profile to unsubscribe.</p>
+							</tr>
+						</table>
+					</tr>
+				</table>
+			</div>
+		</body>
+	</html>';
 	
+	$result['message'] = $message;
+	$result['subject'] = $subject;
+	$result['to'] = $to;
+	
+	//echo $message, $subject, $to;
+	return $result;
 }
 
 /*

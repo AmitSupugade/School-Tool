@@ -17,14 +17,14 @@ $(document).ready(function () {
     $(document).on('submit', '#forgot-pwd', function (e) {
 		e.preventDefault();
 		var form_data = $(this).serialize();
-		console.log(form_data);
+		//console.log(form_data);
 		$.ajax({
 			type: "POST",
 			url: "php/forgot_password.php",
 			data: form_data,
 			dataType: 'json',
 			success: function (response) {
-				console.log(response);
+				//console.log(response);
 				if (!response.success) {
 					if (response.errors.db) {
 						alert("Refresh the page and try again.  " + response.errors.db);
@@ -34,6 +34,39 @@ $(document).ready(function () {
 					}
 				} else {
 					alert("Link to reset Password has been sent to your email. Please use the link in email to reset your password. Thank you!");
+					window.location = "index.html";
+				}
+			}
+		});
+    });
+});
+
+//Function to handle forgot username submit button
+$(document).ready(function () {
+    $(document).on('submit', '#forgot-uname', function (e) {
+		e.preventDefault();
+		var form_data = $(this).serialize();
+		//console.log(form_data);
+		$.ajax({
+			type: "POST",
+			url: "php/forgot_username.php",
+			data: form_data,
+			dataType: 'json',
+			success: function (response) {
+				//console.log(response);
+				if (!response.success) {
+					if (response.errors.db) {
+						alert("Refresh the page and try again.");
+					}
+					if (response.errors.email) {
+						alert(response.errors.email);
+					}
+					if (response.errors.noEmail) {
+						alert(response.errors.noEmail);
+						window.location = "forgot_username.html";
+					}
+				} else {
+					alert("We have sent your username to your email. Thank you!");
 					window.location = "index.html";
 				}
 			}
@@ -55,8 +88,7 @@ $(document).ready(function () {
 			data: form_data,
 			dataType: 'json',
 			success: function (response) {
-				console.log("RESPONSE");
-				console.log(response);
+				//console.log(response);
 				if (!response.success) {
 					if (response.errors.db) {
 						alert("Refresh the page and try again.  " + response.errors.db);

@@ -66,6 +66,17 @@ class Dbase {
 		return $row['Email'];
 	}
 	
+	public function get_email_username($email) {
+		$query = "SELECT Username FROM user WHERE Email = :Email";
+		$db = $this->connect();
+		$stmt = $db->prepare($query);
+		$stmt->bindValue(':Email', $email, PDO::PARAM_STR);
+		$stmt->execute();
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		$this->disconnect($db);
+		return $row['Username'];
+	}
+	
 	//Get student_id from parent_id
 	public function get_parent_student($parent_id) {
 		$query = "SELECT StudentId FROM parent WHERE Id = :ParentId";
